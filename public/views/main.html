@@ -1,14 +1,10 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/blog">Blog</a></li>
-   
-  </ul>
-  <h3 class="text-muted">baby-mean</h3>
-</div>
+<form action="" ng-submit="createPerson(newPerson)">
+  <h1>Please enter your information:</h1>
+  <input type="text" ng-model="newPerson.name" placeholder="name" >
+  <span ng-init="newPerson.status=true"></span>
+  <input type="text" ng-model="newPerson.avatar" placeholder="image URL">
 
-<div class="jumbotron">
-  <h1>Welcome to baby-mean</h1>
-  <p><a class="btn btn-lg btn-success" ng-href="#/blog">Go to blog!</a></p>
-</div>
 
+
+
+</form>
