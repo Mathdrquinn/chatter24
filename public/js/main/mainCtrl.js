@@ -7,6 +7,7 @@ angular.module("mainController")
         $location.path('/lobby');
 
       };
+      
       $scope.people = mainSvc.query();
 
       $scope.createRoom = function (room){
