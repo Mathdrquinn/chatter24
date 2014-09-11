@@ -3,7 +3,6 @@
 angular
   .module('chatApp', [
     'mainController',
-    'mainService',
     'ngCookies',
     'ngResource',
     'ngSanitize',
