@@ -1,6 +1,17 @@
 <h2>You are in the lobby</h2>
-<div class="right">
+<div class="left">
+  <p>the population</p>
   <ul>
-    <li ng-repeat="person in people"><img src="{{person.avatar}}" alt="image of person">{{person.name}}</li>
+    <li ng-repeat="person in people"><img style="height: 50px" src="{{person.avatar}}" alt="image of person">{{person.name}}</li>
   </ul>
+</div>
+<div class="right">
+  <p>the rooms</p>
+  <ul>
+    <li>Room Titles Go Here</li>
+  </ul>
+  <form action="" ng-submit="createRoom(newRoom)">
+    <input type="text" ng-model="newRoom.title">
+    <!--span ng-init="newRoom.chat=[{author: "PUT USER NAME HERE", date: PUTSOMETHING HERE, chat: "Room created."}]"></span-->
+  </form>
 </div>
