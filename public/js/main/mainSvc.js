@@ -1,5 +1,5 @@
 angular.module("mainController")
-  .factory("mainSvc", function ($resourse, $rootScope, $log) {
+  .factory("mainSvc", function ($resource, $rootScope, $log) {
       return $resource('collections/people',
 			{},
 			{
