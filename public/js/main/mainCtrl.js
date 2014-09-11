@@ -9,10 +9,4 @@ angular.module("mainController")
       };
       $scope.people = mainSvc.query();
 
-
-
-
-
-
-
     });
