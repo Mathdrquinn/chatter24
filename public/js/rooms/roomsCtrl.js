@@ -1,12 +1,15 @@
-angular.module("mainController")
-    .controller("roomCtrl", function ($rootScope, $scope, $location, $routeParams, mainSvc) {
+angular.module("roomController")
+    .controller("roomCtrl", function ($rootScope, $scope, $location, $routeParams, roomsSvc) {
 
-      $scope.createPerson = function (person){
-        mainSvc.create(person);
-        $rootScope.$broadcast('person:added');
-        $location.path('/lobby');
+      $scope.createRoom = function (room){
+        roomsSvc.createRoom(room);
+        $rootScope.$broadcast('room:added');
+        //$location.path('/lobby');
 
       };
-      $scope.people = mainSvc.query();
+
+      $scope.rooms = roomsSvc.query();
+
+
 
     });

@@ -2,7 +2,7 @@ angular.module("roomController", ["ngRoute"])
   .config(function ($routeProvider) {
     $routeProvider
     .when("/:room", {
-      templateUrl: "views/room.html",
+      templateUrl: "views/rooms.html",
       controller: "roomCtrl"
     });
   });
