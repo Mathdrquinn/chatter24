@@ -1,7 +1,7 @@
 angular.module("mainController")
     .controller("mainCtrl", function ($rootScope, $scope, $location, $routeParams, mainSvc, roomsSvc) {
 
-      // $scope.user = "undefined";
+
 
       $scope.createPerson = function (person){
         mainSvc.create(person);
@@ -12,9 +12,11 @@ angular.module("mainController")
 
       };
 
+
       // $scope.deletePerson = function (person){
       //   mainSvc.delete(person._id);
       // };
+
 
       $scope.people = mainSvc.query();
 
@@ -24,6 +26,7 @@ angular.module("mainController")
         //$location.path('/lobby');
 
       };
+
 
       $scope.rooms = roomsSvc.query();
 
