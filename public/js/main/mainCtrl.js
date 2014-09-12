@@ -34,7 +34,7 @@ angular.module("mainController")
         var length = $scope.people.length
         var y = x.name
         for(var i = 0; i < length; i++) {
-          if (scope.people[i].name === y) {
+          if ($scope.people[i].name === y) {
             return x;
           }
           else {
