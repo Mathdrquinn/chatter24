@@ -22,6 +22,13 @@ angular.module("mainController")
 
       $scope.createRoom = function (room){
         roomsSvc.createRoom(room);
+        var room = {
+          title: room.title,
+          chats: [],
+          date: Date()
+        };
+        console.log(room);
+        roomsSvc.create(room);
         $rootScope.$broadcast('room:added');
         //$location.path('/lobby');
 

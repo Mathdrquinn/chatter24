@@ -17,3 +17,15 @@
     <!--span ng-init="newRoom.chat=[{author: "PUT USER NAME HERE", date: PUTSOMETHING HERE, chat: "Room created."}]"></span-->
   </form>
 </div>
+<p>Navigate Rooms</p>
+<div ng-repeat="room in rooms">
+  <ul>
+    <li><a href="">{{room.title}}</a> - created on {{room.date | date:'short'}}</li>
+  </ul>
+  </form>
+</div>
+<p>or, create a new room:</p>
+<form action="" ng-submit="createRoom(newRoom)">
+  <input type="text" ng-model="newRoom.title">
+  <!--span ng-init="newRoom.chat=[{author: "PUT USER NAME HERE", date: PUTSOMETHING HERE, chat: "Room created."}]"></span-->
+  <button type="submit">Create Room</button>

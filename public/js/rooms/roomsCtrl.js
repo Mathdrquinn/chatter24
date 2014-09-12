@@ -12,7 +12,7 @@ angular.module("roomController")
         //$location.path('/lobby');
 
       };
-
+      
       $scope.rooms = roomsSvc.query();
 
       // $scope.postChat = function (chat){
