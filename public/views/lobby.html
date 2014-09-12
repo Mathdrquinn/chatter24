@@ -1,9 +1,9 @@
-<h2>You are in the lobby</h2>
+<h2>You are in the lobby, {{user.name}}</h2>
 <div class="left">
   <p>the population</p>
   <ul>
     <li ng-repeat="person in people"><img style="height: 50px" src="{{person.avatar}}" alt="image of person">{{person.name}}
-      <a href="" ng-click="deletePerson(person._id)">Delete</a></li>
+      <a href="" ng-click="deletePerson(person)">Delete</a></li>
 
   </ul>
 </div>
