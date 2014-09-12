@@ -24,6 +24,7 @@ angular.module("mainController")
 
       };
 
+
       $scope.rooms = roomsSvc.query();
 
     });
