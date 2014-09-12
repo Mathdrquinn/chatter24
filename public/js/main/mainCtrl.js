@@ -30,30 +30,33 @@ angular.module("mainController")
 
       $scope.rooms = roomsSvc.query();
 
-      $scope.user = "undefined";
+      $scope.user = user;
 
       $scope.createUser = function (x) {
         console.log("begin create");
+        var works = "false";
         var length = $scope.people.length;
         var y = x.name;
         console.log(y + ":" + length);
-        for(var i = 0; i < length; i++) {
-          console.log(i);
-          if ($scope.people[i].name === y) {
-            $scope.user = x;
-            return;
-          }
-          else {
-            console.log("begin else statement");
-            $scope.createPerson = function (x){
-              $scope.user = x;
-              mainSvc.create(person);
-              $rootScope.$broadcast('person:added');
-              $location.path('/lobby');
+        if (works ==="false") {
 
-            };
+          for(var i = 0; i < length; i++) {
+            console.log(i);
+            if ($scope.people[i].name === y) {
+              user = x;
+              works = "worked";
+              console.log("name matches" + y);
+              $location.path("/lobby");
+              return ;
+            }
           }
         }
-      }
+        if (works === "false") {
+          console.log("begin create ne person");
+          user = x;
+          mainSvc.create(x);
+          $location.path("/lobby");
+        }
+      };
 
     });

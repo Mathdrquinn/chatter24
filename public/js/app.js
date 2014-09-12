@@ -1,5 +1,11 @@
 'use strict';
 
+window.user = {
+  name: "undefined",
+  avatar: "",
+  status: false
+};
+
 angular
   .module('chatApp', [
     'mainController',
