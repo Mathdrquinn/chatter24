@@ -30,14 +30,18 @@ angular.module("mainController")
       $scope.user = "undefined";
 
       $scope.createUser = function (x) {
-        var length = $scope.people.length
-        var y = x.name
+        console.log("begin create");
+        var length = $scope.people.length;
+        var y = x.name;
+        console.log(y + ":" + length);
         for(var i = 0; i < length; i++) {
+          console.log(i);
           if ($scope.people[i].name === y) {
             $scope.user = x;
             return;
           }
           else {
+            console.log("begin else statement");
             $scope.createPerson = function (x){
               $scope.user = x;
               mainSvc.create(person);
