@@ -11,9 +11,12 @@ angular.module("mainController")
         // console.log($scope.user);
 
       };
-      $scope.deletePerson = function (_id){
-        mainSvc.delete(_id);
-      };
+
+
+      // $scope.deletePerson = function (person){
+      //   mainSvc.delete(person._id);
+      // };
+
 
       $scope.people = mainSvc.query();
 
@@ -23,15 +26,28 @@ angular.module("mainController")
         //$location.path('/lobby');
 
       };
-      //
-      // $scope.postChat = function (chat){
-      //   chat = {
-      //     name: $scope.user,
-      //     text: chat.text,
-      //     date: getDate();
-      //   }
-      // };
+
 
       $scope.rooms = roomsSvc.query();
+
+      $scope.user = function (x) {
+        var length = $scope.people.length
+        var y = x.name
+        for(var i = 0; i < length, i++) {
+          if (scope.people[i].name === y) {
+            return x;
+          }
+          else {
+            $scope.createPerson = function (x){
+
+              mainSvc.create(person);
+              $rootScope.$broadcast('person:added');
+              $location.path('/lobby');
+              return x;
+
+            };
+          }
+        }
+      }
 
     });
