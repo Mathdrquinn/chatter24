@@ -1,19 +1,16 @@
 angular.module("roomController")
-    .controller("roomCtrl", function ($rootScope, $scope, $location, $routeParams, roomsSvc) {
+    .controller("roomCtrl", function ($rootScope, $scope, $location, $log, $routeParams, oneRoomSvc, roomsSvc) {
 
-      $scope.createRoom = function (room){
-        var room = {
-          title: newRoom.title,
-          chats: [],
-          date: getDate()
+        $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+
+        $scope.chat = function () {
+            oneRoomSvc.chat($scope.singleRoom);
+
         };
-        roomsSvc.create(room);
-        $rootScope.$broadcast('room:added');
-        //$location.path('/lobby');
 
-      };
+        $log.info($scope.singleRoom);
 
-      $scope.rooms = roomsSvc.query();
+        $scope.user = user;
 
       // $scope.postChat = function (chat){
       //   chat = {
