@@ -3,7 +3,7 @@ angular.module("mainController")
       return $resource('api/collections/people',
 			{},
 			{
-			  query: { method: 'GET', isArray: true},,
+			  query: { method: 'GET', isArray: true},
 				create: { method: 'POST'},
 			});
 
