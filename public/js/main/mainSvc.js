@@ -4,7 +4,8 @@ angular.module("mainController")
 			{},
 			{
 				query: { method: 'GET', isArray: true },
-				create: { method: 'POST'}
+				create: { method: 'POST'},
+        delete: {method: 'DELETE'},
 			});
 
   });

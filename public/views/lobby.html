@@ -2,7 +2,9 @@
 <div class="left">
   <p>the population</p>
   <ul>
-    <li ng-repeat="person in people"><img style="height: 50px" src="{{person.avatar}}" alt="image of person">{{person.name}}</li>
+    <li ng-repeat="person in people"><img style="height: 50px" src="{{person.avatar}}" alt="image of person">{{person.name}}
+      <a href="" ng-click="deletePerson(person._id)">Delete</a></li>
+
   </ul>
 </div>
 <div class="right">
@@ -15,3 +17,9 @@
     <!--span ng-init="newRoom.chat=[{author: "PUT USER NAME HERE", date: PUTSOMETHING HERE, chat: "Room created."}]"></span-->
   </form>
 </div>
+<!-- <div class="right" ng-repeat="chats in rooms.chats">
+  <p>{{chat.name}}:</p>
+  <p>{{chat.text}}</p>
+  <p>{{chat.date}}</p>
+
+</div> -->
