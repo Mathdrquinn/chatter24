@@ -1,7 +1,7 @@
 angular.module("mainController")
     .controller("mainCtrl", function ($rootScope, $scope, $location, $routeParams, mainSvc, roomsSvc) {
 
-      // $scope.user = "undefined";
+
 
       $scope.createPerson = function (person){
         mainSvc.create(person);
@@ -11,8 +11,8 @@ angular.module("mainController")
         // console.log($scope.user);
 
       };
-      $scope.deletePerson = function (person){
-        mainSvc.delete(person._id);
+      $scope.deletePerson = function (_id){
+        mainSvc.delete(_id);
       };
 
       $scope.people = mainSvc.query();
@@ -23,7 +23,14 @@ angular.module("mainController")
         //$location.path('/lobby');
 
       };
-
+      //
+      // $scope.postChat = function (chat){
+      //   chat = {
+      //     name: $scope.user,
+      //     text: chat.text,
+      //     date: getDate();
+      //   }
+      // };
 
       $scope.rooms = roomsSvc.query();
 
