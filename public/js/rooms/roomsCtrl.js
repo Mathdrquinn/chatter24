@@ -4,10 +4,7 @@ angular.module("roomController")
       $scope.createRoom = function (room){
         var room = {
           title: newRoom.title,
-          chats: [
-            name:user.name,
-            text:,
-          ],
+          chats: [],
           date: getDate()
         };
         roomsSvc.create(room);
