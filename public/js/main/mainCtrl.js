@@ -51,7 +51,7 @@ angular.module("mainController")
             }
           }
         }
-        else if (works === "false") {
+        if (works === "false") {
           console.log("begin create ne person");
           $scope.user = x;
           mainSvc.create(x);
