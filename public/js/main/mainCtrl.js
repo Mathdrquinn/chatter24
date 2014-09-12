@@ -11,8 +11,8 @@ angular.module("mainController")
         // console.log($scope.user);
 
       };
-      $scope.deletePerson = function (id){
-        mainSvc.delete(id);
+      $scope.deletePerson = function (_id){
+        mainSvc.delete(_id);
       };
 
       $scope.people = mainSvc.query();
