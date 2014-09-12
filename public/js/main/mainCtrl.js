@@ -1,5 +1,5 @@
 angular.module("mainController")
-    .controller("mainCtrl", function ($rootScope, $scope, $location, $routeParams, mainSvc, roomsSvc) {
+    .controller("mainCtrl", function ($rootScope, $scope, $location, $log, $routeParams, mainSvc, roomsSvc) {
 
 
 
@@ -21,12 +21,12 @@ angular.module("mainController")
       $scope.people = mainSvc.query();
 
       $scope.createRoom = function (room){
-        roomsSvc.createRoom(room);
         var room = {
           title: room.title,
           chats: [],
           date: Date()
         };
+
         console.log(room);
         roomsSvc.create(room);
         $rootScope.$broadcast('room:added');
@@ -36,6 +36,15 @@ angular.module("mainController")
 
 
       $scope.rooms = roomsSvc.query();
+//
+//      $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+//
+//      $scope.chat = function () {
+//          oneRoomSvc.chat($scope.singleRoom);
+//
+//      };
+//
+//      $log.info($scope.singleRoom);
 
       $scope.user = user;
 

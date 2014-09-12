@@ -7,4 +7,15 @@ angular.module("roomController")
         create: { method: 'POST'}
       });
 
-  });
+  })
+    .factory("oneRoomSvc", function ($resource, $rootScope, $log) {
+        return $resource('api/collections/rooms/:id',
+            {
+                id: '@_id'
+            },
+            {
+                show: { method: 'GET' },
+                chat: { method: 'PUT' }
+            });
+
+    });
