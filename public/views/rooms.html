@@ -1,6 +1,12 @@
 <h2>this is a room</h2>
 
 <p>{{singleRoom.title}}</p>
+<ul>
+    <li ng-repeat="message in singleRoom.chats">
+        <p>On {{message.time}}, {{message.author}} said:</p>
+        <p>{{message.text}}</p>
+    </li>
+</ul>
 
 <!-- <div class="right" ng-repeat="items in chats">
   <p>{{chat.name}}:</p>
@@ -8,6 +14,6 @@
   <p>{{chat.date}}</p>
   
 </div> -->
-<form action="" ng-submit=postChat(newChat)>
+<form action="" ng-submit="chat(singleRoom, newChat)">
   <input type="text" ng-model="newChat.text">
 </form>
