@@ -20,10 +20,21 @@ angular.module("roomController")
             oneRoomSvc.chat(room);
             $scope.newChat = {};
             console.log("go to bottom");
-            $scope.goToBottom();
+            //$scope.goToBottom();
+            sleep(1);
             console.log("end chat");
 
         };
+
+        function sleep(milliseconds) {
+            var start = new Date().getTime();
+            for (var i = 0; i < 1e7; i++) {
+                if ((new Date().getTime() - start) > milliseconds){
+                    $scope.goToBottom();
+                    return;
+                }
+            }
+        }
 
         $log.info($scope.singleRoom);
 

@@ -5,4 +5,7 @@
   border: 1px solid black; }
   #chatWindow ul {
     float: bottom;
-    bottom: 0; }
+    bottom: 0;
+    margin-bottom: -60px; }
+    #chatWindow ul .even {
+      background-color: lightgrey; }

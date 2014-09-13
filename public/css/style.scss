@@ -6,5 +6,9 @@
   ul {
     float: bottom;
     bottom:0;
+    margin-bottom:-60px;
+    .even {
+      background-color: lightgrey;
+    }
   }
 }
