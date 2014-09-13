@@ -1,5 +1,6 @@
 'use strict';
 
+
 window.user = {
   name: "undefined",
   avatar: "",

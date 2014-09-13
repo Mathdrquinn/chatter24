@@ -1,0 +1,14 @@
+#chatWindow {
+  position: relative;
+  height:600px;
+  overflow-y: scroll;
+  border: 1px solid black;
+  ul {
+    float: bottom;
+    bottom:0;
+    margin-bottom:-60px;
+    .even {
+      background-color: lightgrey;
+    }
+  }
+}
