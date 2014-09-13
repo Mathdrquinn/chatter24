@@ -1,12 +1,14 @@
 <h2>this is a room</h2>
 
 <p>{{singleRoom.title}}</p>
-<ul>
-    <li ng-repeat="message in singleRoom.chats">
-        <p>On {{message.time}}, {{message.author}} said:</p>
-        <p>{{message.text}}</p>
-    </li>
-</ul>
+<div id="chatWindow">
+    <ul id="chatList">
+        <li ng-repeat="message in singleRoom.chats">
+            <p>On {{message.time | date:'short'}}, {{message.author}} said:</p>
+            <p>{{message.text}}</p>
+        </li>
+    </ul>
+</div>
 
 <!-- <div class="right" ng-repeat="items in chats">
   <p>{{chat.name}}:</p>

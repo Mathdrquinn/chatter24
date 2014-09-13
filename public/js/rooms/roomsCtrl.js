@@ -3,17 +3,23 @@ angular.module("roomController")
 
         $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
 
+        $scope.newChat = {};
+
+
         $scope.user = user;
 
-        $scope.chat = function (room, message) {
+        $scope.chat = function (room) {
             console.log("begin creating chat");
-            message.author = user.name;
-            message.time = Date();
-            console.log(message);
-            room.chats.push(message);
+            $scope.newChat.author = user.name;
+            var t = new Date();
+            console.log(t);
+            $scope.newChat.time = t.getTime();
+            console.log($scope.newChat.time);
+            console.log($scope.newChat);
+            room.chats.push($scope.newChat);
             oneRoomSvc.chat(room);
+            $scope.newChat = {};
             console.log("end chat");
-
 
         };
 

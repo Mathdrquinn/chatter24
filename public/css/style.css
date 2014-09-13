@@ -1,8 +1,8 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+#chatWindow {
+  position: relative;
+  height: 600px;
+  overflow-y: scroll;
+  border: 1px solid black; }
+  #chatWindow ul {
+    float: bottom;
+    bottom: 0; }
