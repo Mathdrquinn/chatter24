@@ -7,7 +7,9 @@
             <p>On {{message.time | date:'short'}}, {{message.author}} said:</p>
             <p>{{message.text}}</p>
         </li>
-        <span style="color:red" id="bottom">bottom</span>
+        <!-- This span is here for the moment to act as a buffer and an item to scroll to when a new chat is added -->
+        <!-- See goToBottom() function in roomsCtrl for more information -->
+        <span style="display: block; color:red; padding-top: 30px" id="bottom">bottom</span>
     </ul>
 </div>
 

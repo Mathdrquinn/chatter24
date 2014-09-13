@@ -19,6 +19,8 @@ angular.module("roomController")
             room.chats.push($scope.newChat);
             oneRoomSvc.chat(room);
             $scope.newChat = {};
+            console.log("go to bottom");
+            $scope.goToBottom();
             console.log("end chat");
 
         };
