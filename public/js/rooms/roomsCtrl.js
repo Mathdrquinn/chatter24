@@ -1,5 +1,5 @@
 angular.module("roomController")
-    .controller("roomCtrl", function ($rootScope, $scope, $location, $log, $routeParams, oneRoomSvc, roomsSvc) {
+    .controller("roomCtrl", function ($rootScope, $scope, $location, $anchorScroll, $log, $routeParams, oneRoomSvc, roomsSvc) {
 
         $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
 
@@ -36,6 +36,22 @@ angular.module("roomController")
       //   roomsSvc.create(chat);
       //
       // };
+
+        $scope.goToBottom = function() {
+            // set the location.hash to the id of
+            // the element you wish to scroll to.
+            $location.hash('bottom');
+
+            // call $anchorScroll()
+            $anchorScroll();
+        };
+        //This does not work, though it does when clicked....
+        var init = function() {
+            console.log("go to bottom");
+            $scope.goToBottom();
+        }
+
+        init();
 
 
 

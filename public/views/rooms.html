@@ -7,6 +7,7 @@
             <p>On {{message.time | date:'short'}}, {{message.author}} said:</p>
             <p>{{message.text}}</p>
         </li>
+        <span style="color:red" id="bottom">bottom</span>
     </ul>
 </div>
 
@@ -19,3 +20,4 @@
 <form action="" ng-submit="chat(singleRoom, newChat)">
   <input type="text" ng-model="newChat.text">
 </form>
+<a href="" ng-click="goToBottom()">View Most Recent</a>
