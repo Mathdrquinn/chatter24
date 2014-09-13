@@ -6,16 +6,61 @@ body {
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif; }
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: white; }
+
+h2 {
+  color: white; }
 
 .main {
   margin-top: -2.5%;
   text-align: center; }
   .main h1 {
-    font-family: 'Pacifico', cursive;
     font-size: 10em;
-    padding: 10% 0;
-    color: white; }
+    padding: 10% 0; }
+
+header {
+  width: 100%;
+  border-bottom: 2px solid white; }
+  header h1 {
+    margin-left: 2.5%; }
+
+.lobby {
+  width: 90%;
+  margin-left: 5%; }
+  .lobby h3 {
+    margin-top: 0;
+    font-weight: 700; }
+
+.left {
+  background-color: white;
+  width: 30%;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 2%; }
+  .left ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .left li {
+    font-size: 1.5em; }
+
+.right {
+  background-color: white;
+  width: 69%;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 2%; }
 
 #chatWindow {
   position: relative;
