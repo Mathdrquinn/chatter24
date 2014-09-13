@@ -1,6 +1,26 @@
+body{
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#60A3E1), to(#29B5C3));
+  background: -webkit-linear-gradient(top, #60A3E1, #29B5C3);
+  background: -moz-linear-gradient(top, #60A3E1, #29B5C3);
+  background: -o-linear-gradient(top, #60A3E1, #29B5C3);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main{
+  margin-top:-2.5%;
+  text-align:center;
+  h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 10em;
+    padding:10% 0;
+    color:white;
+  }
+}
 #chatWindow {
   position: relative;
-  height:600px;
+  height:450px;
   overflow-y: scroll;
   border: 1px solid black;
   ul {
