@@ -1,7 +1,8 @@
 angular.module("roomController")
-    .controller("roomCtrl", function ($rootScope, $scope, $location, $anchorScroll, $log, $routeParams, oneRoomSvc, roomsSvc) {
+    .controller("roomCtrl", function ($rootScope, $scope, $location, $interval, $anchorScroll, $log, $routeParams, oneRoomSvc, roomsSvc) {
 
-        $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+
+       $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
 
         $scope.newChat = {};
 
