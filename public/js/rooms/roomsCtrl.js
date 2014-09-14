@@ -73,13 +73,13 @@ angular.module("roomController")
 //            console.log("end get collection");
 //        }, 5000);
 
-        $scope.watchCollection(
-            "collection",
-            function() {
-
-            },
-            true
-        );
+//        $scope.watchCollection(
+//            "singleRoom",
+//            function( newValue, oldValue ) {
+//              $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+//            },
+//            true
+//        );
 
 
 

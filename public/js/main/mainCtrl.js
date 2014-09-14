@@ -34,6 +34,10 @@ angular.module("mainController")
 
       };
 
+      $rootScope.$on("room:added", function () {
+          $scope.rooms = roomsSvc.query();
+      });
+
 
       $scope.rooms = roomsSvc.query();
 //

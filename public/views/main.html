@@ -1,11 +1,12 @@
+<div class="main">
 <form action="" ng-submit="createUser(newPerson)">
-  <h1>Please enter your information:</h1>
-  <input type="text" ng-model="newPerson.name" placeholder="name" >
+  <h1>Chatter</h1>
+    <img src="../css/logo.png" alt=""/>
+    <h2>Login with your name or create a new account:</h2>
+  <input type="text" ng-model="newPerson.name" placeholder="Name" >
   <span ng-init="newPerson.status=true"></span>
-  <input type="text" ng-model="newPerson.avatar" placeholder="image URL">
-  <button type="submit"></button>
-
-
-
+  <input type="text" ng-model="newPerson.avatar" placeholder="Image URL">
+  <button type="submit">Go</button>
 
 </form>
+</div>

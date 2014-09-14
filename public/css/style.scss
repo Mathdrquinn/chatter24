@@ -1,8 +1,141 @@
+body{
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#60A3E1), to(#29B5C3));
+  background: -webkit-linear-gradient(top, #60A3E1, #29B5C3);
+  background: -moz-linear-gradient(top, #60A3E1, #29B5C3);
+  background: -o-linear-gradient(top, #60A3E1, #29B5C3);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+}
+.container{
+  margin:0;
+  padding:0;
+  width:100%;
+}
+h1{
+  font-family: 'Pacifico', cursive;
+  color:white;
+}
+h2{
+  color:white;
+}
+input{
+  border-radius:5px;
+  border:1px solid lightgray;
+}
+button{
+  border-radius:5px;
+}
+.main{
+  text-align:center;
+  h1{
+    font-size: 10em;
+    margin-top:5%;
+  }
+  img{
+    width:15%;
+  }
+}
+header{
+  width:100%;
+  border-bottom:2px solid white;
+  h1{
+    margin-left:2.5%;
+    display:inline-block;
+  }
+  img{
+    width:3.5%;
+    float:right;
+    margin-top:1.5%;
+    margin-right:2.5%;
+  }
+}
+.lobby{
+  width:90%;
+  margin-left:5%;
+  h3{
+    margin-top:0;
+    font-weight:700;
+  }
+}
+.left{
+  background-color:white;
+  width:30%;
+  border-radius:5px;
+  display:inline-block;
+  padding:2%;
+  .navUsers{
+    position: relative;
+    height:314px;
+    overflow-y: scroll;
+  }
+  ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  li{
+    font-size:1.5em;
+    img{
+      margin-right:2%;
+    }
+  }
+}
+.right{
+  background-color:white;
+  width:69%;
+  border-radius:5px;
+  display:inline-block;
+  vertical-align: top;
+  padding:2%;
+  .navRooms{
+    position: relative;
+    height:250px;
+    overflow-y: scroll;
+
+    li{
+      font-size:1.5em;
+    }
+  }
+}
+.rooms{
+  width:90%;
+  margin-left:5%;
+  a {
+    padding:3px;
+    color:white;
+  }
+  #chatForm {
+    margin-bottom: 5px;
+  }
+  #bottomClick {
+
+  }
+  #lobbyClick {
+    margin-left: 20px;
+    float: right;
+  }
+  .search{
+    min-width: 155px;
+    width:15%;
+  }
+  ul{
+    list-style:none;
+    padding:2%;
+  }
+}
+.chatBox{
+  width:100%;
+  font-size:1.5em;
+}
 #chatWindow {
   position: relative;
-  height:600px;
+  height:300px;
   overflow-y: scroll;
-  border: 1px solid black;
+  background-color:white;
+  border-radius:5px;
   ul {
     float: bottom;
     bottom:0;
