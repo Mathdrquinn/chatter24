@@ -103,7 +103,22 @@ header{
 .rooms{
   width:90%;
   margin-left:5%;
+  a {
+    padding:3px;
+    color:white;
+  }
+  #chatForm {
+    margin-bottom: 5px;
+  }
+  #bottomClick {
+
+  }
+  #lobbyClick {
+    margin-left: 20px;
+    float: right;
+  }
   .search{
+    min-width: 155px;
     width:15%;
   }
   ul{

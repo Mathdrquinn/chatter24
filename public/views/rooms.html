@@ -3,30 +3,29 @@
     <img src="../css/logo.png" alt=""/>
 </header>
 <div class="rooms">
-<h2>Welcome to {{singleRoom.title}}, {{user.name}}.</h2>
-<p>
-    <input class="search" type="text" ng-model="search.text" placeholder="Search by text"/>
-    <!-- trying to count the number of matches to the search -->
-    <!--span>{{search.chats.length}} matches</span-->
-    <input class="search" type="text" ng-model="search.author" placeholder="Search by contributor"/>
-</p>
-<div id="chatWindow">
-    <ul id="chatList">
-        <li ng-class-odd="'odd'" ng-class-even="'even'"ng-repeat="message in singleRoom.chats | filter : search : strict">
-            <p>On {{message.time | date:'short'}}, <strong>{{message.author}}</strong> said:</p>
-            <p>{{message.text}}</p>
-        </li>
-        <!-- This span is here for the moment to act as a buffer and an item to scroll to when a new chat is added -->
-        <!-- See goToBottom() function in roomsCtrl for more information -->
-        <span style="display: block; color:red; padding-top: 30px" id="bottom">This chat room has {{singleRoom.chats.length.toString()}} contributions.</span>
-    </ul>
-</div>
+    <h2>Welcome to {{singleRoom.title}}, {{user.name}}.</h2>
+    <p>
+        <input class="search"  type="text" ng-model="search.text" placeholder="Search by text"/>
+        <!-- trying to count the number of matches to the search -->
+        <!--span>{{search.chats.length}} matches</span-->
+        <input class="search" type="text" ng-model="search.author" placeholder="Search by contributor"/>
+    </p>
+    <div id="chatWindow">
+        <ul id="chatList">
+            <li ng-class-odd="'odd'" ng-class-even="'even'"ng-repeat="message in singleRoom.chats | filter : search : strict">
+                <p>On {{message.time | date:'short'}}, <strong>{{message.author}}</strong> said:</p>
+                <p>{{message.text}}</p>
+            </li>
+            <!-- This span is here for the moment to act as a buffer and an item to scroll to when a new chat is added -->
+            <!-- See goToBottom() function in roomsCtrl for more information -->
+            <span style="display: block; color:red; padding-top: 30px" id="bottom">This chat room has {{singleRoom.chats.length.toString()}} contributions.</span>
+        </ul>
+    </div>
 
 
-<form action="" ng-submit="chat(singleRoom, newChat)">
-  <input class="chatBox" type="text" ng-model="newChat.text" placeholder="{{user.name}} says...">
-</form>
-<a href="" ng-click="goToBottom()">View Most Recent</a>
-    <br>
-<a href="#/lobby">Return to Lobby</a>
+    <form id="chatForm" action="" ng-submit="chat(singleRoom, newChat)">
+      <input class="chatBox" type="text" ng-model="newChat.text" placeholder="{{user.name}} says...">
+    </form>
+    <a id="bottomClick" href="" ng-click="goToBottom()">View Most Recent</a>
+    <a id="lobbyClick" href="#/lobby">Return to Lobby</a>
 </div>

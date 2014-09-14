@@ -59,12 +59,27 @@ angular.module("roomController")
             $anchorScroll();
         };
         //This does not work, though it does when clicked....
-        var init = function() {
-            console.log("go to bottom");
-            $scope.goToBottom();
-        }
+//        var init = function() {
+//            console.log("go to bottom");
+//            $scope.goToBottom();
+//        }
+//
+//        init();
 
-        init();
+        <!-- This reloads the data but refeshes the data too.  Super frustrating but works -->
+//        $scope.getCollection = setInterval(function () {
+//            console.log("get colleciton");
+//            $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+//            console.log("end get collection");
+//        }, 5000);
+
+//        $scope.watchCollection(
+//            "singleRoom",
+//            function( newValue, oldValue ) {
+//              $scope.singleRoom = oneRoomSvc.show({id: $routeParams.id});
+//            },
+//            true
+//        );
 
 
 

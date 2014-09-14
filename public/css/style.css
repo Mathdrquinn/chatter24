@@ -91,7 +91,16 @@ header {
 .rooms {
   width: 90%;
   margin-left: 5%; }
+  .rooms a {
+    padding: 3px;
+    color: white; }
+  .rooms #chatForm {
+    margin-bottom: 5px; }
+  .rooms #lobbyClick {
+    margin-left: 20px;
+    float: right; }
   .rooms .search {
+    min-width: 155px;
     width: 15%; }
   .rooms ul {
     list-style: none;
